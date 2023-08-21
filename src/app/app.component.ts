@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'password';
+
+  buttonClick(){
+    console.log("Event Binding'i Öğreniyoruz");
+  }
 }
