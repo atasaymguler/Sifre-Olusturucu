@@ -18,4 +18,8 @@ export class AppComponent {
   {
     return this.password;
   }
+  getName()
+  {
+    return "Atasay"
+  }
 }
