@@ -6,9 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'password';
+  title = "password"; // title ve password property 
+  password= "Atasay";
 
-  buttonClick(){
+  buttonClick(){  // Event Binding
+    this.password="Can"
     console.log("Event Binding'i Öğreniyoruz");
+  }
+
+  getPassword()
+  {
+    return this.password;
   }
 }
