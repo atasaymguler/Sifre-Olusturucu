@@ -6,17 +6,17 @@
 
 <div>
   <label >Alfabeyi Kullan</label>
-  <input type="checkbox">
+  <input (change)="modifyLetters()" type="checkbox">
 </div>
 
 <div>
   <label >Sayıları Kullan</label>
-  <input type="checkbox">
+  <input (change)="modifyNumbers()" type="checkbox">
 </div>
 
 <div>
   <label >Sembolleri Kullan</label>
-  <input type="checkbox">
+  <input (change)="modifySymbols()" type="checkbox">
 </div>
 
 <div>
@@ -25,10 +25,8 @@
 
 <div>
   <label >Şifreniz</label>
-  <input [value]="password">  <!-- [value] dediğimiz zaman gözüküyor, Burada sadece property  değil metotta kullanabiliriz, -->
-  <!-- <input [value]="getPassword()"> -->
+  <input>
 </div>
 
- <p>{{password}}</p><!-- İnputta value ile propertyi yazdırıyoruz ama normal p taginde h taginde nasıl yazdıracaz ?, sadece property değil metotta yazabiliriz geri döndürdüğü değer yazılır -->
 
- <p>{{getName()}}</p>
+ 

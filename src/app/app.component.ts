@@ -6,20 +6,36 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = "password"; // title ve password property 
-  password= "Atasay";
 
-  buttonClick(){  // Event Binding
-    this.password="Can"
-    console.log("Event Binding'i Öğreniyoruz");
+  includeLetters :boolean = false;
+  includeNumbers :boolean = false;
+  includeSymbols :boolean = false;
+
+  modifyLetters()
+  {
+    
+    this.includeLetters = !this.includeLetters;  // Ben burada true dersem ticki geri aldığım da bunun false olması lazım o yüzden değiline eşitledik 
+
+
+  }
+  modifyNumbers()
+  {
+    this.includeNumbers = !this.includeNumbers;
+  }
+  modifySymbols()
+  {
+    this.includeSymbols = !this.includeSymbols;
   }
 
-  getPassword()
-  {
-    return this.password;
+  buttonClick(){ 
+    console.log(`Değerlerim ;
+    Letters : ${this.includeLetters}
+    Numbers : ${this.includeNumbers}
+    Symbols : ${this.includeSymbols}
+
+    `);  // Buttona basınca değeri görebiliriz doğrulama yapabiliriz.
+    
   }
-  getName()
-  {
-    return "Atasay"
-  }
+
+ 
 }
