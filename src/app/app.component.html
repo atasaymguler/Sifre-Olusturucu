@@ -1,7 +1,7 @@
 <h1>Şifre Oluşturucu</h1>
 <div>
-  <label >Şifre Uzunluğu</label>
-  <input type="text">
+ <label >Şifre Uzunluğu</label>   <!-- Şifre uzunluğunu change eventini(ilk 3 yazdık boş stringten 3 oldu daha sonra 4 yazdık 34 oldu) ve input eventini kullanabiliriz -->
+   <input type="text" (change)="modifyLength($event.target.value)"> <!-- Bu event ile inputta ki değer değişince ve girilince değeri ts'ye aktardık  -->
 </div>
 
 <div>

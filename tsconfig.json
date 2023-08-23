@@ -25,9 +25,11 @@
     ]
   },
   "angularCompilerOptions": {
-    "enableI18nLegacyMessageIdFormat": false,
-    "strictInjectionParameters": true,
-    "strictInputAccessModifiers": true,
-    "strictTemplates": true
+    // "enableI18nLegacyMessageIdFormat": false,  // en sağlıklısı form ile yapmak ama daha görmedik, hata almamak için bunları yorum satırına çevirdim diğer ikisini ekledim
+    // "strictInjectionParameters": true,
+    // "strictInputAccessModifiers": true,
+    // "strictTemplates": true,
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
   }
 }

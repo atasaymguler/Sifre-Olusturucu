@@ -7,9 +7,28 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  length: number=0; //Başlangı. değeri ataması yaptık
   includeLetters :boolean = false;
   includeNumbers :boolean = false;
   includeSymbols :boolean = false;
+
+  modifyLength(value:string)
+  {
+    debugger;
+    //console.log(value); girilen değerin geli gelmediğini kontrol ederiz
+    const parsedValue = parseInt(value);  // Burada ise gelen string değeri int'e çevirdik
+    if(!isNaN(parsedValue)){  //Burada ise girilen değer (!isNan) bir not a number(sayı değilse) yani sayı değilsenin değili yani sayı ise bu değeri length'e aktardık.
+
+      
+      this.length = parsedValue;
+      console.log(this.length);
+      
+    }else
+    {
+      alert("Error : Lüten Sayı Giriniz")
+    }
+
+  }
 
   modifyLetters()
   {
