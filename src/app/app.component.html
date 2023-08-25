@@ -1,7 +1,7 @@
 <h1>Şifre Oluşturucu</h1>
 <div>
- <label >Şifre Uzunluğu</label>   <!-- Şifre uzunluğunu change eventini(ilk 3 yazdık boş stringten 3 oldu daha sonra 4 yazdık 34 oldu) ve input eventini kullanabiliriz -->
-   <input type="text" (change)="modifyLength($event.target.value)"> <!-- Bu event ile inputta ki değer değişince ve girilince değeri ts'ye aktardık  -->
+ <label >Şifre Uzunluğu</label>   
+   <input type="text" (change)="modifyLength($event.target.value)"> 
 </div>
 
 <div>
@@ -21,11 +21,9 @@
 
 <div>
   
-  <!-- Şifre uzunluğu ve checkboxlardan en az 1 tane seçildikten sonra buttonu ben kullandırmak istiyorum nasıl Yaparım ? -->
+  
 <button [disabled]="!(length && (includeLetters || includeNumbers || includeSymbols))" (click)="buttonClick()">Oluştur</button>
- <!-- Burada eğer disabled'ı length'e bağladık length'in değili yani başlangıç değeri değilse değer button aktifleşecek length başlangıç değeri false , includelarda ise
-hepsi başlangıç değeri false biri değişirse true gelir ve parantez true olur veya işlemi var diye, uzunluk girilmemişse ve bir checbox işaretlenmişse false ve true'dan false olur ve değili truedur yani disabled true olur button pasif duruma gelir, iki değer varsa true gelir ve değil false button aktifleşir.
-disabled=true button pasifleşir, false aktifleşir -->
+ 
 </div>
 
 
