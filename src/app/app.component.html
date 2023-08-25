@@ -46,7 +46,8 @@
         >
          Oluştur
         </button>
-  
+        <!-- Burada ngIf ile eğer password var ise bu div gözükür hale gelir, password true ise gözüküyor passwordün başlangıç değeri '' yani boş string olması aynı sayılarda olduğu gibi js tarafında nasıl number da 0 false algılanıyorsa, boş string false olarak algılanır buttona basıldığın da password'e değer ataması oluyor sonuçta bir string değer var diyor bu yüzden true olarak algılanıyor güzükür hale gelir div. Boş string false olarak algılanıyor dolu string true olarak algılanıyor. -->
+        <!-- *ngIf="password !=''" ve  *ngIf="password aynı şeyler -->
         <div class="box" *ngIf="password">
           <label>Şifreniz</label>
           <input class="input" [value]="password" />
