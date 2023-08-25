@@ -8,17 +8,16 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   password:string = "";
-  length: number = 0; //Başlangı. değeri ataması yaptık
+  length: number = 0;
   includeLetters: boolean = false;
   includeNumbers: boolean = false;
   includeSymbols: boolean = false;
 
   modifyLength(value: string) {
     debugger;
-    //console.log(value); girilen değerin geli gelmediğini kontrol ederiz
-    const parsedValue = parseInt(value);  // Burada ise gelen string değeri int'e çevirdik
-    if (!isNaN(parsedValue)) {  //Burada ise girilen değer (!isNan) bir not a number(sayı değilse) yani sayı değilsenin değili yani sayı ise bu değeri length'e aktardık.
-
+   
+    const parsedValue = parseInt(value);  
+    if (!isNaN(parsedValue)) { 
 
       this.length = parsedValue;
       console.log(this.length);
@@ -31,7 +30,7 @@ export class AppComponent {
 
   modifyLetters() {
 
-    this.includeLetters = !this.includeLetters;  // Ben burada true dersem ticki geri aldığım da bunun false olması lazım o yüzden değiline eşitledik 
+    this.includeLetters = !this.includeLetters; 
 
 
   }
@@ -49,7 +48,7 @@ export class AppComponent {
 
     let validChar = "";
 
-    if(this.includeNumbers)    //Eğer checkboxlar tiklenmişse valide o alanda ki tüm değerler aktarılıyor
+    if(this.includeNumbers)    
     {
       validChar += numbers
     }
@@ -72,12 +71,6 @@ export class AppComponent {
     this.password = generatePassword ;
 
 
-    //Seçilmiş olan checkboxların değerleri validChar'a aktarılıyor, döngü ile kullanıcının girdiği sayı kadar işlem yapılıyor,
-    //İşlemin içeriği şu şekilde; Math.random fonks sayesin de  0 ile 1 arasında random bir değer(sayı) atanıyor(1 dahil değil) 
-    //Daha sonra atanan değer ile validCharın uzunluğu çarpılıp, Math.floor fonks ile aşağı yuvarlanıyor yani hep tam sayı geliyor 
-    //Bu değer index'e aktarılıyor ve validChar[index] ile karakterler arasında hangisine denk geliyorsa o string değeri generate'e aktarılyor.
-    //Döngü boyunca aktarılma gerçekleşiyor ve string değer ile string değer toplanırsa yanyana yazılıyor ve yeni bir sşifre oluşuyor
-    //Bu yeni şifreyi [value]="password" ile inputa yazdırıyoruz.
 
 }
 
